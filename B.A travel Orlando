@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B.A TRAVEL</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            margin: 10;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        main {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: left;
+        }
+        footer {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        #logo {
+            width: 100px;
+            height: auto;
+        }
+        h2 {
+            color: #007bff;
+            font-size: 44px;
+            margin-top: 0;
+        }
+        p {
+            font-size: 15px;
+        }
+        ul {
+            margin-top: 0;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+            
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="logo">
+            <img src="logo0.png" alt="Logo de la compañía" id="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="mostrarSeccion('inicio')">Inicio</a></li>
+                <li><a href="#" onclick="mostrarSeccion('vuelos')">Vuelos</a></li>
+                <li><a href="#" onclick="mostrarSeccion('alojamientos')">Alojamientos</a></li>
+                <li><a href="#" onclick="mostrarSeccion('paquetes')">Paquetes</a></li>
+            </ul>
+        </nav>
+        <div class="user">
+            <a href="login.html" style="color: #fff;">Iniciar sesión</a> / <a href="registro.html" style="color: #fff;">Registrarse</a>
+        </div>
+    </header>
+    
+    <!-- Contenido principal -->
+    <main>
+        <section id="inicio">
+            <h2>Misión</h2>
+            <p>Ofrecer experiencias de viaje excepcionales, conectando a las personas con destinos inolvidables y creando recuerdos para toda la vida.</p>
+
+            <h2>Visión</h2>
+            <p>Ser la plataforma líder a nivel mundial en la industria del turismo, ofreciendo la mejor selección de vuelos, alojamientos y paquetes turísticos.</p>
+
+            <h2>Valores</h2>
+            <ul>
+                <li>Excelencia en el servicio al cliente</li>
+                <li>Innovación constante</li>
+                <li>Integridad y transparencia</li>
+                <li>Compromiso con la satisfacción del cliente</li>
+            </ul>
+        </section>
+
+        <section id="vuelos" style="display: none;">
+            <h2>Vuelos</h2>
+            <p>Encuentra las mejores tarifas y opciones de vuelo para tu próximo viaje.</p>
+            <a href="vuelos.html" class="button">Buscar vuelos</a>
+        </section>
+
+        <section id="alojamientos" style="display: none;">
+            <h2>Alojamientos</h2>
+            <p>Descubre una amplia variedad de opciones de alojamiento, desde hoteles de lujo hasta acogedores bed and breakfasts.</p>
+            <a href="alojamientos.html" class="button">Buscar alojamientos</a>
+        </section>
+
+        <section id="paquetes" style="display: none;">
+            <h2>Paquetes</h2>
+            <p>Explora nuestros paquetes turísticos cuidadosamente diseñados para ofrecerte las mejores experiencias de viaje.</p>
+            <a href="paquetes.html" class="button">Ver paquetes</a>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p> B.A TRAVEL 2024.</p>
+    </footer>
+
+    <script>
+        function mostrarSeccion(id) {
+            // Ocultar todas las secciones
+            var secciones = document.getElementsByTagName("section");
+            for (var i = 0; i < secciones.length; i++) {
+                secciones[i].style.display = "none";
+            }
+
+            // Mostrar la sección correspondiente al id proporcionado
+            var seccion = document.getElementById(id);
+            if (seccion) {
+                seccion.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
+
+
